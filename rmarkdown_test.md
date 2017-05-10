@@ -1,17 +1,27 @@
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.
 
+First load the tidyverse
+
 ``` r
 library(tidyverse)
 ```
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.
+CV of benzophenone
+------------------
 
 ``` r
-mtcars %>% ggplot(aes(mpg, disp, color = factor(cyl))) + geom_point()
+data <- read_csv('data/CV4 2mM benzophenone.txt', col_names = c('Pot', 'Cur'), skip = 30)
 ```
 
-![](https://raw.githubusercontent.com/emiltb/os_test/master/rmarkdown_test_files/figure-markdown_github/unnamed-chunk-2-1.png)
+    ## Parsed with column specification:
+    ## cols(
+    ##   Pot = col_double(),
+    ##   Cur = col_double()
+    ## )
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+``` r
+data %>% ggplot(aes(Pot, Cur)) +
+  geom_path()
+```
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+![](http://github.com/emiltb/os_test/rmarkdown_test_files/figure-markdown_github/unnamed-chunk-3-1.png)

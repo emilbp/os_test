@@ -10,17 +10,22 @@ output:
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
 
+First load the tidyverse
+
 ```{r, message=FALSE, warning=FALSE}
 library(tidyverse)
 ```
 
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
 
+## CV of benzophenone
 ```{r}
-mtcars %>% ggplot(aes(mpg, disp, color = factor(cyl))) + geom_point()
+data <- read_csv('data/CV4 2mM benzophenone.txt', col_names = c('Pot', 'Cur'), skip = 30)
 ```
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+```{r}
+data %>% ggplot(aes(Pot, Cur)) +
+  geom_path()
+```
+
