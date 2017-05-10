@@ -10,7 +10,7 @@ Try executing this chunk by clicking the *Run* button within the chunk or by pla
 mtcars %>% ggplot(aes(mpg, disp, color = factor(cyl))) + geom_point()
 ```
 
-![](/rmarkdown_test_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![](https://raw.githubusercontent.com/emiltb/os_test/master/rmarkdown_test_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
 
