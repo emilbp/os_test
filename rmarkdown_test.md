@@ -24,4 +24,4 @@ data %>% ggplot(aes(Pot, Cur)) +
   geom_path()
 ```
 
-![](http://github.com/emiltb/os_test/rmarkdown_test_files/figure-markdown_github/unnamed-chunk-3-1.png)
+![](https://raw.githubusercontent.com/emiltb/os_test/master/rmarkdown_test_files/figure-markdown_github/unnamed-chunk-3-1.png)
