@@ -2,10 +2,8 @@
 title: "R Notebook"
 output:  
   github_document:
-    fig_width: 5
-    fig_height: 5
-    dev: png
     html_preview: false
+    md_extensions: -autolink_bare_uris
 ---
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
